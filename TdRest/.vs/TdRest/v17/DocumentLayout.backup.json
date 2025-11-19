@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\lucdu\\source\\repos\\TdRest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\TdRest.csproj|c:\\users\\lucdu\\source\\repos\\tdrest\\tdrest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\TdRest.csproj|solutionrelative:tdrest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\BackendBiking.csproj|c:\\users\\lucdu\\source\\repos\\tdrest\\tdrest\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\BackendBiking.csproj|solutionrelative:tdrest\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\TdRest.csproj|C:\\Users\\lucdu\\source\\repos\\TdRest\\tdrest\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\TdRest.csproj|solutionrelative:tdrest\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\BackendBiking.csproj|c:\\users\\lucdu\\source\\repos\\tdrest\\tdrest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\BackendBiking.csproj|solutionrelative:tdrest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\TdRest.csproj|C:\\Users\\lucdu\\source\\repos\\TdRest\\tdrest\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\TdRest.csproj|solutionrelative:tdrest\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\TdRest.csproj|C:\\Users\\lucdu\\source\\repos\\TdRest\\tdrest\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{29CE16A7-2B83-42EE-930E-FE68AB73EA37}|TdRest\\TdRest.csproj|solutionrelative:tdrest\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\lucdu\\source\\repos\\TdRest\\TdRest\\App.config",
+              "RelativeDocumentMoniker": "TdRest\\App.config",
+              "ToolTip": "C:\\Users\\lucdu\\source\\repos\\TdRest\\TdRest\\App.config",
+              "RelativeToolTip": "TdRest\\App.config",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-19T13:58:12.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\lucdu\\source\\repos\\TdRest\\TdRest\\packages.config",
               "RelativeDocumentMoniker": "TdRest\\packages.config",
@@ -46,18 +63,17 @@
               "RelativeToolTip": "TdRest\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-10-08T13:50:50.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T13:50:50.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lucdu\\source\\repos\\TdRest\\TdRest\\Program.cs",
               "RelativeDocumentMoniker": "TdRest\\Program.cs",
               "ToolTip": "C:\\Users\\lucdu\\source\\repos\\TdRest\\TdRest\\Program.cs",
               "RelativeToolTip": "TdRest\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAA+wCIAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-24T13:05:16.779Z",
               "EditorCaption": ""

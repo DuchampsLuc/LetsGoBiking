@@ -23,7 +23,7 @@ namespace ServiceProxyBike
         static readonly HttpClient client = new HttpClient();
         static GenericProxyCache<string> cache = new GenericProxyCache<string>();
         static GenericProxyCache<Position> CoorCache = new GenericProxyCache<Position>();
-        static GenericProxyCache<Parcours> ParcoursCache = new GenericProxyCache<Parcours>();
+        static GenericProxyCache<string> ParcoursCache = new GenericProxyCache<string>();
 
         public async Task<string> GetContract(string contract)
 		{     
@@ -96,59 +96,29 @@ namespace ServiceProxyBike
         {
             Position pos1 = new Position(lat1, lng1);
             Position pos2 = new Position(lat2, lng2);
-            String PourCache = JsonConvert.SerializeObject(pos1) + JsonConvert.SerializeObject(pos2);
+            string PourCache = JsonConvert.SerializeObject(pos1) + JsonConvert.SerializeObject(pos2);
             
             try
             {
-                if (ParcoursCache.Get(PourCache, 86400) == default(Parcours))
+                if (ParcoursCache.Get(PourCache, 86400) == null)
                 {
 
                     string apiKey = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjVjYjFmYjIxYWQ1YzQxNjdiMzdhOGFkMGQyNGQxZDUyIiwiaCI6Im11cm11cjY0In0="; // remplace par ta clé ORS
-                    //string url = $"https://api.openrouteservice.org/v2/directions/foot-walking?api_key={apiKey}&start={pos1.lng.ToString(CultureInfo.InvariantCulture)},{pos1.lat.ToString(CultureInfo.InvariantCulture)}&end={pos2.lng.ToString(CultureInfo.InvariantCulture)},{pos2.lat.ToString(CultureInfo.InvariantCulture)}";
-             
-                    string url = $"https://api.openrouteservice.org/v2/directions/foot-walking?api_key={Uri.EscapeDataString(apiKey)}&start={pos1.lng.ToString(CultureInfo.InvariantCulture)},{pos1.lat.ToString(CultureInfo.InvariantCulture)}&end={pos2.lng.ToString(CultureInfo.InvariantCulture)},{pos2.lat.ToString(CultureInfo.InvariantCulture)}";
+                    string url = $"https://api.openrouteservice.org/v2/directions/foot-walking?api_key={apiKey}&start={pos1.lng.ToString(CultureInfo.InvariantCulture)},{pos1.lat.ToString(CultureInfo.InvariantCulture)}&end={pos2.lng.ToString(CultureInfo.InvariantCulture)},{pos2.lat.ToString(CultureInfo.InvariantCulture)}";
                    
                     HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
                     
                     string json = await response.Content.ReadAsStringAsync();
+                    ParcoursCache.addValue(PourCache, json);
                     
-                    JObject obj = JObject.Parse(json);
-
-                    
-                    Parcours parcours = new Parcours();
-                    var steps = obj["features"]?[0]?["properties"]?["segments"]?[0]?["steps"];
-                   
-                    if (steps != null)
-                    {
-                        foreach (var step in steps)
-                        {
-                            var start = step["start_location"] ?? step["way_points"]?[0];
-                            var end = step["end_location"] ?? step["way_points"]?[1];
-
-                            double lat = start?[0]?.Value<double>() ?? 0;
-                            double lng = start?[1]?.Value<double>() ?? 0;
-                            string instruction = step["instruction"]?.Value<string>() ?? "";
-
-                            parcours.Etapes.Add(new Etape
-                            {
-                                Position = new Position (lat, lng),
-                                Instruction = instruction
-                            });
-                        }
-                        return "test";
-                        ParcoursCache.addValue(PourCache, parcours);
-                        
-                    }
-
-                    String test= JsonConvert.SerializeObject(parcours);
-                    return "t";
+                    return json;
                 }
                 else
                 {
 
-                    //return JsonConvert.SerializeObject(ParcoursCache.Get(PourCache));
-                    return "testnbihjv";
+                    return JsonConvert.SerializeObject(ParcoursCache.Get(PourCache));
+                    
                 }
 
             }
@@ -264,16 +234,6 @@ namespace ServiceProxyBike
         public double lat { get; set; }
         public double lng { get; set; }
     }
-    public class Parcours
-    {
-        public List<Etape> Etapes { get; set; }
-    }
-
-    public class Etape
-    {
-        public Position Position { get; set; }
-        public string Instruction { get; set; }
-    }
-
+    
 }
 

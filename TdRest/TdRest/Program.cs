@@ -12,9 +12,10 @@
         using System.Device.Location;
         using static System.Collections.Specialized.BitVector32;
         using System.Xml.Linq;
-       
+using System.Globalization;
 
-    namespace TdRest
+
+namespace TdRest
     {
         internal class Program
         {
@@ -27,10 +28,22 @@
                     String contract = Console.ReadLine();
                     var clientSoap = new ProxyBikeSOAP.Service1Client();
 
-           
-                    string responseBody = await clientSoap.GetContractAsync(contract);
-                    Console.WriteLine(responseBody);
 
+                /*string responseBody = await clientSoap.GetContractAsync(contract);
+                */
+
+                    String responseBody1 = await clientSoap.GetCoordoneesAsync("Paris");
+                    Console.WriteLine(responseBody1);
+                    String responseBody2 = await clientSoap.GetCoordoneesAsync("Lyon");
+                    Console.WriteLine(responseBody2);
+                    Position pos1 = JsonConvert.DeserializeObject<Position>(responseBody1);
+                    Position pos2 = JsonConvert.DeserializeObject<Position>(responseBody2);
+                    Console.WriteLine(pos1);
+                    Console.WriteLine(pos2);
+                    
+                    String responseBody = await clientSoap.getParcoursAsync(pos1.lat, pos1.lng, pos2.lat, pos2.lng);
+                    Console.WriteLine(responseBody);
+                    /*
                     Console.WriteLine("Choisis une station parmi celle qui sont affichées,rentre le nom!!");
                     String contract1 = Console.ReadLine();
                     List<Station> stations = JsonConvert.DeserializeObject<List<Station>>(responseBody);
@@ -38,7 +51,7 @@
                     Console.WriteLine(stationNom);
                     Console.WriteLine("\n");
                     Station s1 = getClosestStation(stationNom, stations);
-                    Console.WriteLine(s1);
+                    Console.WriteLine(s1);*/
 
 
             }
@@ -82,8 +95,8 @@
         }
         public class Position{
 
-        public float lat { get; set;}
-        public float lng { get; set; }
+        public double lat { get; set;}
+        public double lng { get; set; }
 
         public override string ToString()
         {

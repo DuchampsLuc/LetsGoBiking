@@ -14,4 +14,35 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetCoordonees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adresse" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoordoneesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCoordoneesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getParcours">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lat1" type="xs:double" />
+        <xs:element minOccurs="0" name="lng1" type="xs:double" />
+        <xs:element minOccurs="0" name="lat2" type="xs:double" />
+        <xs:element minOccurs="0" name="lng2" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getParcoursResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getParcoursResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

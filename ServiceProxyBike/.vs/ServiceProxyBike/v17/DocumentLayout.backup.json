@@ -34,8 +34,7 @@
               "RelativeToolTip": "ServiceProxyBike\\App.config",
               "ViewState": "AgIAAAYAAAAAAAAAAADwvxAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-10-08T13:33:47.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T13:33:47.964Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "ServiceProxyBike\\Service1.cs",
               "ToolTip": "C:\\Users\\lucdu\\Desktop\\ProjetMidleware\\ServiceProxyBike\\ServiceProxyBike\\Service1.cs",
               "RelativeToolTip": "ServiceProxyBike\\Service1.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAgwIoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAgwHMAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T13:33:46.123Z",
               "EditorCaption": ""
@@ -60,8 +59,7 @@
               "RelativeToolTip": "ServiceProxyBike\\IService1.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T13:23:47.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T13:23:47.764Z"
             }
           ]
         }
