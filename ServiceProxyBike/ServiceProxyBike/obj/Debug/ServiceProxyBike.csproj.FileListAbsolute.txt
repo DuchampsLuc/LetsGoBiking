@@ -1,0 +1,10 @@
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.dll.config
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.dll
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.pdb
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.csproj.AssemblyReference.cache
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.csproj.CoreCompileInputs.cache
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.dll
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.pdb
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceP.948205A1.Up2Date

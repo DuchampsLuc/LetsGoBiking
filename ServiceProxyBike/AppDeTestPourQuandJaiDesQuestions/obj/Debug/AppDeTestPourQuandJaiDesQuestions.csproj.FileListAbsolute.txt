@@ -1,0 +1,7 @@
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\AppDeTestPourQuandJaiDesQuestions\bin\Debug\AppDeTestPourQuandJaiDesQuestions.exe.config
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\AppDeTestPourQuandJaiDesQuestions\bin\Debug\AppDeTestPourQuandJaiDesQuestions.exe
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\AppDeTestPourQuandJaiDesQuestions\bin\Debug\AppDeTestPourQuandJaiDesQuestions.pdb
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\AppDeTestPourQuandJaiDesQuestions\obj\Debug\AppDeTestPourQuandJaiDesQuestions.csproj.AssemblyReference.cache
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\AppDeTestPourQuandJaiDesQuestions\obj\Debug\AppDeTestPourQuandJaiDesQuestions.csproj.CoreCompileInputs.cache
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\AppDeTestPourQuandJaiDesQuestions\obj\Debug\AppDeTestPourQuandJaiDesQuestions.exe
+C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\AppDeTestPourQuandJaiDesQuestions\obj\Debug\AppDeTestPourQuandJaiDesQuestions.pdb

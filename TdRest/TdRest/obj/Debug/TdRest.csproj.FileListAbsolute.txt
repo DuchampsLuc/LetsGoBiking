@@ -1,0 +1,10 @@
+C:\Users\lucdu\source\repos\TdRest\TdRest\bin\Debug\TdRest.exe.config
+C:\Users\lucdu\source\repos\TdRest\TdRest\bin\Debug\TdRest.exe
+C:\Users\lucdu\source\repos\TdRest\TdRest\bin\Debug\TdRest.pdb
+C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\TdRest.csproj.AssemblyReference.cache
+C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\TdRest.csproj.CoreCompileInputs.cache
+C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\TdRest.exe
+C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\TdRest.pdb
+C:\Users\lucdu\source\repos\TdRest\TdRest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lucdu\source\repos\TdRest\TdRest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\TdRest.csproj.Up2Date
