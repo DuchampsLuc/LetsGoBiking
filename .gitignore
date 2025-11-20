@@ -1,0 +1,86 @@
+## --- Visual Studio / VS Code ---
+.vs/
+.vscode/
+*.code-workspace
+
+## --- Build ---
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+build/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+
+## --- User-specific files ---
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## --- Temporary files ---
+*.tmp
+*.log
+*.bak
+*.old
+*.orig
+*.tmp
+Thumbs.db
+ehthumbs.db
+
+## --- NuGet ---
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## --- WPF / WCF local data ---
+*.vsidx
+*.db
+*.ide
+*.cache
+*.json.tmp
+
+## --- IIS Express ---
+iisexpress/
+*.vspscc
+*._i
+
+## --- DotNetCore (si tu en as) ---
+*.deps.json
+*.dll
+*.pdb
+*.runtimeconfig.json
+*.runtimeconfig.dev.json
+
+## --- Logs ---
+*.log
+*.tlog
+
+## --- Publish outputs ---
+publish/
+*.Publish.xml
+
+## --- Rider / Resharper (si jamais) ---
+.idea/
+*.DotSettings.user
+_reSharper*/
+
+## --- Test results ---
+TestResults/
+*.coverage
+*.coveragexml
+*.trx
+
+## --- Others ---
+*.class
+*.exe
+*.cache
+*.mdb
+*.pid
+*.plist

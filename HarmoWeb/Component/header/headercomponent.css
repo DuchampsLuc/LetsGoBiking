@@ -1,0 +1,22 @@
+div { 
+    height: 150px;
+} 
+
+div {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid black;
+}
+nav {    
+    width:1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div>img { position: fixed; top: 10px; left: 20px;}
