@@ -8,3 +8,32 @@ C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\BackendBiking.csproj.CoreCom
 C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\BackendB.9C380C6B.Up2Date
 C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\TdRest.exe
 C:\Users\lucdu\source\repos\TdRest\TdRest\obj\Debug\TdRest.pdb
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\obj\Debug\BackendBiking.csproj.AssemblyReference.cache
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\obj\Debug\BackendBiking.csproj.CoreCompileInputs.cache
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\TdRest.exe.config
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\TdRest.exe
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\TdRest.pdb
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Buffers.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.IO.Pipelines.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Memory.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Text.Json.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Buffers.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.IO.Pipelines.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Memory.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Text.Json.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\obj\Debug\BackendB.9C380C6B.Up2Date
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\obj\Debug\TdRest.exe
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\obj\Debug\TdRest.pdb
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\TdRest\TdRest\obj\Debug\TdRest.exe.config

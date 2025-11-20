@@ -8,3 +8,13 @@ C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\obj\Deb
 C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\bin\Debug\Newtonsoft.Json.dll
 C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\bin\Debug\Newtonsoft.Json.xml
 C:\Users\lucdu\Desktop\ProjetMidleware\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceP.948205A1.Up2Date
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.dll.config
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.pdb
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\Newtonsoft.Json.xml
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.csproj.AssemblyReference.cache
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.csproj.CoreCompileInputs.cache
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceP.948205A1.Up2Date
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.dll
+C:\Users\adrien\Documents\Polytech Nice\SI4\MiddleWare\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.pdb

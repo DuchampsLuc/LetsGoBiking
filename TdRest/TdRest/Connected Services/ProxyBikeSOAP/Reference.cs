@@ -28,10 +28,10 @@ namespace TdRest.ProxyBikeSOAP {
         System.Threading.Tasks.Task<string> GetCoordoneesAsync(string adresse);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getParcours", ReplyAction="http://tempuri.org/IService1/getParcoursResponse")]
-        string getParcours(double lat1, double lng1, double lat2, double lng2);
+        string getParcours(double lat1, double lng1, double lat2, double lng2, bool isCycling);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getParcours", ReplyAction="http://tempuri.org/IService1/getParcoursResponse")]
-        System.Threading.Tasks.Task<string> getParcoursAsync(double lat1, double lng1, double lat2, double lng2);
+        System.Threading.Tasks.Task<string> getParcoursAsync(double lat1, double lng1, double lat2, double lng2, bool isCycling);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -77,12 +77,12 @@ namespace TdRest.ProxyBikeSOAP {
             return base.Channel.GetCoordoneesAsync(adresse);
         }
         
-        public string getParcours(double lat1, double lng1, double lat2, double lng2) {
-            return base.Channel.getParcours(lat1, lng1, lat2, lng2);
+        public string getParcours(double lat1, double lng1, double lat2, double lng2, bool isCycling) {
+            return base.Channel.getParcours(lat1, lng1, lat2, lng2, isCycling);
         }
         
-        public System.Threading.Tasks.Task<string> getParcoursAsync(double lat1, double lng1, double lat2, double lng2) {
-            return base.Channel.getParcoursAsync(lat1, lng1, lat2, lng2);
+        public System.Threading.Tasks.Task<string> getParcoursAsync(double lat1, double lng1, double lat2, double lng2, bool isCycling) {
+            return base.Channel.getParcoursAsync(lat1, lng1, lat2, lng2, isCycling);
         }
     }
 }

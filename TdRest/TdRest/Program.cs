@@ -1,18 +1,20 @@
-﻿        using System;
+﻿        using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+        using System;
         using System.Collections.Generic;
+        using System.Collections.Generic;
+        using System.Device.Location;
+using System.Diagnostics.Contracts;
+using System.Globalization;
         using System.IO;
         using System.Linq;
         using System.Net;
         using System.Net.Http;
         using System.Text;
         using System.Threading.Tasks;
-        using static System.Net.WebRequestMethods;
-        using Newtonsoft.Json;
-        using System.Collections.Generic;
-        using System.Device.Location;
-        using static System.Collections.Specialized.BitVector32;
         using System.Xml.Linq;
-using System.Globalization;
+        using static System.Collections.Specialized.BitVector32;
+        using static System.Net.WebRequestMethods;
 
 
 namespace TdRest
@@ -32,16 +34,18 @@ namespace TdRest
                 /*string responseBody = await clientSoap.GetContractAsync(contract);
                 */
 
-                    String responseBody1 = await clientSoap.GetCoordoneesAsync("Paris");
+                String start = "Amiens", dest = "Lyon";
+                /*
+                    String responseBody1 = await clientSoap.GetCoordoneesAsync(start);
                     Console.WriteLine(responseBody1);
-                    String responseBody2 = await clientSoap.GetCoordoneesAsync("Lyon");
+                    String responseBody2 = await clientSoap.GetCoordoneesAsync(dest);
                     Console.WriteLine(responseBody2);
                     Position pos1 = JsonConvert.DeserializeObject<Position>(responseBody1);
                     Position pos2 = JsonConvert.DeserializeObject<Position>(responseBody2);
                     Console.WriteLine(pos1);
-                    Console.WriteLine(pos2);
-                    
-                    String responseBody = await clientSoap.getParcoursAsync(pos1.lat, pos1.lng, pos2.lat, pos2.lng);
+                    Console.WriteLine(pos2);*/
+
+                String responseBody = await getRoute(clientSoap, start, dest); //await clientSoap.getParcoursAsync(pos1.lat, pos1.lng, pos2.lat, pos2.lng);
                     Console.WriteLine(responseBody);
                     /*
                     Console.WriteLine("Choisis une station parmi celle qui sont affichées,rentre le nom!!");
@@ -63,30 +67,91 @@ namespace TdRest
             }
             static Station getClosestStation(Station station,List<Station> stations)
             {
-                Station closeststation = null;
-                GeoCoordinate mygeo = new GeoCoordinate(station.position.lat, station.position.lng);
-                GeoCoordinate closest = null;
-            for (int i = 0; i < stations.Count; i++)
-            {
-                GeoCoordinate temp = new GeoCoordinate(stations[i].position.lat, stations[i].position.lng);
-                if (mygeo.GetDistanceTo(temp) != 0) {
-                    if (closest != null)
-                    {
+            return getClosestStation(station.position.lat, station.position.lng, stations);
+            }
 
-                        if (mygeo.GetDistanceTo(temp) < mygeo.GetDistanceTo(closest))
+
+            static Station getClosestStation(double lat, double lng, List<Station> stations)
+            {
+                Station closeststation = null;
+                GeoCoordinate mygeo = new GeoCoordinate(lat, lng);
+                GeoCoordinate closest = null;
+                for (int i = 0; i < stations.Count; i++)
+                {
+                    GeoCoordinate temp = new GeoCoordinate(stations[i].position.lat, stations[i].position.lng);
+                    if (mygeo.GetDistanceTo(temp) != 0)
+                    {
+                        if (closest != null)
+                        {
+
+                            if (mygeo.GetDistanceTo(temp) < mygeo.GetDistanceTo(closest))
+                            {
+                                closest = new GeoCoordinate(stations[i].position.lat, stations[i].position.lng);
+                                closeststation = stations[i];
+                            }
+                        }
+                        else
                         {
                             closest = new GeoCoordinate(stations[i].position.lat, stations[i].position.lng);
-                            closeststation = stations[i];
                         }
                     }
-                    else
-                    {
-                        closest= new GeoCoordinate(stations[i].position.lat, stations[i].position.lng);
-                    }
                 }
-            }
                 return closeststation;
 
+            }
+
+        static async Task<string> getRoute(ProxyBikeSOAP.Service1Client clientSoap, string start, string dest)
+            {
+            String startResponse = await clientSoap.GetCoordoneesAsync(start);
+            Console.WriteLine(startResponse);
+            String destResponse = await clientSoap.GetCoordoneesAsync(dest);
+            Console.WriteLine(destResponse);
+            Position posStart = JsonConvert.DeserializeObject<Position>(startResponse);
+            Position posDest = JsonConvert.DeserializeObject<Position>(destResponse);
+
+            string walkingRouteResponse = await clientSoap.getParcoursAsync(posStart.lat, posStart.lng, posDest.lat, posDest.lng, false);
+
+            //string walkingJson = JsonConvert.DeserializeObject<string>(walkingRouteResponse);
+            JObject walkingObject = JObject.Parse(walkingRouteResponse);
+            double walkingOnlyDuration = (double)walkingObject["features"][0]["properties"]["segments"][0]["duration"];
+
+
+            string startStationsResponse = await clientSoap.GetContractAsync(start); 
+            string destStationsResponse = await clientSoap.GetContractAsync(dest);
+
+            
+            List<Station> startStations = JsonConvert.DeserializeObject<List<Station>>(startStationsResponse);
+            List<Station> destStations = JsonConvert.DeserializeObject<List<Station>>(destStationsResponse);
+            if( startStations != null && destStations != null && startStations.Count != 0 && destStations.Count != 0)
+            {
+                Station startClosestStation = getClosestStation(posStart.lat, posStart.lng, startStations);
+                Station destClosestStation = getClosestStation(posDest.lat, posDest.lng, destStations);
+
+                Position posStartStat = startClosestStation.position;
+                Position posDestStat = destClosestStation.position;
+                string cyclingRouteResponse = await clientSoap.getParcoursAsync(posStartStat.lat, posStartStat.lng, posDestStat.lat, posDestStat.lng, true);
+
+                string walkingRouteResponse1 = await clientSoap.getParcoursAsync(posStart.lat, posStart.lng, posStartStat.lat, posStartStat.lng, false);
+                string walkingRouteResponse2 = await clientSoap.getParcoursAsync(posDestStat.lat, posDestStat.lng, posDest.lat, posDest.lng, false);
+
+                JObject cyclingRoute = JObject.Parse(cyclingRouteResponse);
+                double cyclingDuration = (double)cyclingRoute["features"][0]["properties"]["segments"][0]["duration"];
+
+                JObject walkingRoute1 = JObject.Parse(walkingRouteResponse1);
+                double walkingDuration1 = (double)walkingRoute1["features"][0]["properties"]["segments"][0]["duration"];
+
+                JObject walkingRoute2 = JObject.Parse(walkingRouteResponse1);
+                double walkingDuration2 = (double)walkingRoute1["features"][0]["properties"]["segments"][0]["duration"];
+
+                double totalDuration = walkingDuration1 + cyclingDuration + walkingDuration2;
+
+                if (totalDuration < walkingOnlyDuration) return walkingRouteResponse1 + cyclingRoute + walkingRouteResponse2;
+            }
+            
+
+            //string cyclingRoute = ;
+
+            return walkingRouteResponse;
             }
 
 

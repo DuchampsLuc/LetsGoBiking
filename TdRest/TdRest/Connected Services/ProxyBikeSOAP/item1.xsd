@@ -35,6 +35,7 @@
         <xs:element minOccurs="0" name="lng1" type="xs:double" />
         <xs:element minOccurs="0" name="lat2" type="xs:double" />
         <xs:element minOccurs="0" name="lng2" type="xs:double" />
+        <xs:element minOccurs="0" name="isCycling" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
