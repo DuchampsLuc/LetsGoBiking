@@ -1,0 +1,21 @@
+<HTML lang="en"><HEAD><link rel="alternate" type="text/xml" href="http://localhost:8733/Design_Time_Addresses/ServiceProxyBike/Service1/?disco"/><STYLE type="text/css">#content{ FONT-SIZE: 0.7em; PADDING-BOTTOM: 2em; MARGIN-LEFT: 30px}BODY{MARGIN-TOP: 0px; MARGIN-LEFT: 0px; COLOR: #000000; FONT-FAMILY: Verdana; BACKGROUND-COLOR: white}P{MARGIN-TOP: 0px; MARGIN-BOTTOM: 12px; COLOR: #000000; FONT-FAMILY: Verdana}PRE{BORDER-RIGHT: #f0f0e0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #f0f0e0 1px solid; MARGIN-TOP: -5px; PADDING-LEFT: 5px; FONT-SIZE: 1.2em; PADDING-BOTTOM: 5px; BORDER-LEFT: #f0f0e0 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #f0f0e0 1px solid; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #e5e5cc}.heading1{MARGIN-TOP: 0px; PADDING-LEFT: 15px; FONT-WEIGHT: normal; FONT-SIZE: 26px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 3px; MARGIN-LEFT: -30px; WIDTH: 100%; COLOR: #ffffff; PADDING-TOP: 10px; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: #003366}.intro{display: block; font-size: 1em;}</STYLE><TITLE>Service Service1</TITLE></HEAD><BODY><DIV id="content" role="main"><h1 class="heading1">Service Service1</h1><BR/><P class="intro">Vous avez créé un service.<P class='intro'>Pour tester ce service, vous allez devoir créer un client et l'utiliser pour appeler le service. Pour ce faire, vous pouvez utiliser l'outil svcutil.exe à partir de la ligne de commande avec la syntaxe suivante :</P> <BR/><PRE>svcutil.exe <A HREF="http://localhost:8733/Design_Time_Addresses/ServiceProxyBike/Service1/?wsdl">http://localhost:8733/Design_Time_Addresses/ServiceProxyBike/Service1/?wsdl</A></PRE><P>Il est également possible d'accéder à la description du service dans un fichier unique :<BR/><PRE><A HREF="http://localhost:8733/Design_Time_Addresses/ServiceProxyBike/Service1/?singleWsdl">http://localhost:8733/Design_Time_Addresses/ServiceProxyBike/Service1/?singleWsdl</A></PRE></P></P><P class="intro">Cette opération va créer un fichier de configuration et un fichier de code contenant la classe du client. Ajoutez les deux fichiers à votre application cliente et utilisez la classe de client générée pour appeler le service. Par exemple :<BR/></P><h2 class='intro'>C#</h2><br /><PRE><font color="blue">class </font><font color="black">Test
+</font>{
+<font color="blue">    static void </font>Main()
+    {
+        <font color="black">Service1Client</font> client = <font color="blue">new </font><font color="black">Service1Client</font>();
+
+<font color="darkgreen">        // Utilisez la variable 'client' pour appeler des opérations sur le service.
+
+</font><font color="darkgreen">        // Fermez toujours le client.
+</font>        client.Close();
+    }
+}
+</PRE><BR/><h2 class='intro'>Visual Basic</h2><br /><PRE><font color="blue">Class </font><font color="black">Test
+</font><font color="blue">    Shared Sub </font>Main()
+<font color="blue">        Dim </font>client As <font color="black">Service1Client</font> = <font color="blue">New </font><font color="black">Service1Client</font>()
+<font color="darkgreen">        ' Utilisez la variable 'client' pour appeler des opérations sur le service.
+
+</font><font color="darkgreen">        ' Fermez toujours le client.
+</font>        client.Close()
+<font color="blue">    End Sub
+</font><font color="blue">End Class</font></PRE></DIV></BODY></HTML>

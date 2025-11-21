@@ -21,7 +21,7 @@ namespace ServiceProxyBike
 
 		[OperationContract]
 
-		Task<string> getParcours(double lat1, double lng1, double lat2, double lng2);
+		Task<string> getParcours(double lat1, double lng1, double lat2, double lng2, bool isCycling);
 
 
 		// TODO: ajoutez vos opérations de service ici

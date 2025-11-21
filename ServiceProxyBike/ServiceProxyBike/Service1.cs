@@ -92,33 +92,38 @@ namespace ServiceProxyBike
             }
         }
 
-        public async Task<string> getParcours(double lat1, double lng1, double lat2, double lng2)
+        public async Task<string> getParcours(double lat1, double lng1, double lat2, double lng2, bool isCycling)
         {
             Position pos1 = new Position(lat1, lng1);
             Position pos2 = new Position(lat2, lng2);
-            string PourCache = JsonConvert.SerializeObject(pos1) + JsonConvert.SerializeObject(pos2);
-            
+            string PourCache = JsonConvert.SerializeObject(pos1) + JsonConvert.SerializeObject(pos2) + JsonConvert.SerializeObject(isCycling);
+
             try
             {
                 if (ParcoursCache.Get(PourCache, 86400) == null)
                 {
 
-                    string apiKey = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjVjYjFmYjIxYWQ1YzQxNjdiMzdhOGFkMGQyNGQxZDUyIiwiaCI6Im11cm11cjY0In0="; // remplace par ta clé ORS
-                    string url = $"https://api.openrouteservice.org/v2/directions/foot-walking?api_key={apiKey}&start={pos1.lng.ToString(CultureInfo.InvariantCulture)},{pos1.lat.ToString(CultureInfo.InvariantCulture)}&end={pos2.lng.ToString(CultureInfo.InvariantCulture)},{pos2.lat.ToString(CultureInfo.InvariantCulture)}";
-                   
+                    string apiKey = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjVjYjFmYjIxYWQ1YzQxNjdiMzdhOGFkMGQyNGQxZDUyIiwiaCI6Im11cm11cjY0In0=";
+
+                    string travelMode;
+                    if (!isCycling) travelMode = "foot-walking";
+                    else travelMode = "cycling-regular";
+
+                    string url = $"https://api.openrouteservice.org/v2/directions/" + travelMode + $"?api_key={apiKey}&start={pos1.lng.ToString(CultureInfo.InvariantCulture)},{pos1.lat.ToString(CultureInfo.InvariantCulture)}&end={pos2.lng.ToString(CultureInfo.InvariantCulture)},{pos2.lat.ToString(CultureInfo.InvariantCulture)}";
+
                     HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
-                    
+
                     string json = await response.Content.ReadAsStringAsync();
                     ParcoursCache.addValue(PourCache, json);
-                    
+
                     return json;
                 }
                 else
                 {
 
-                    return JsonConvert.SerializeObject(ParcoursCache.Get(PourCache));
-                    
+                    return ParcoursCache.Get(PourCache);
+
                 }
 
             }
@@ -126,9 +131,9 @@ namespace ServiceProxyBike
             {
                 Console.WriteLine("\nException Caught!");
                 Console.WriteLine("Message :{0} ", e.Message);
-                return "jngsjbgkjkjgdf";
+                return "";
             }
-       
+
         }
 
 

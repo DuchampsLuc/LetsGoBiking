@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel.Web;
 using System.ServiceModel;
 using System.Text;
+using System.Reflection.Emit;
+using System.Threading.Tasks;
 
 
 namespace BackendBiking
@@ -19,6 +21,12 @@ namespace BackendBiking
             BodyStyle = WebMessageBodyStyle.Wrapped,
             UriTemplate = "GetData?value={value}")]
         string GetData(int value);
+		[WebInvoke(
+			Method = "GET",
+			ResponseFormat = WebMessageFormat.Json,
+			BodyStyle = WebMessageBodyStyle.Wrapped,
+			UriTemplate = "GetRoute?start={start}&dest={dest}")]
+		Task<string> GetRoute(string start, string dest);
     }
 }
 

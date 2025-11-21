@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adresse" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContractResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoordonees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adresse" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoordoneesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCoordoneesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getParcours">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lat1" type="xs:double" />
+        <xs:element minOccurs="0" name="lng1" type="xs:double" />
+        <xs:element minOccurs="0" name="lat2" type="xs:double" />
+        <xs:element minOccurs="0" name="lng2" type="xs:double" />
+        <xs:element minOccurs="0" name="isCycling" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getParcoursResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getParcoursResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
