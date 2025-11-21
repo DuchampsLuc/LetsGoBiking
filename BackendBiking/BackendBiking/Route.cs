@@ -14,8 +14,8 @@ namespace BackendBiking
 
     public class RouteSegment
     {
-        public string mode { get; set; }  // "walking" ou "cycling"
-        public JObject route { get; set; } // JSON renvoyé par getParcoursAsync
-        public double duration { get; set; } // durée en secondes
+        public string mode { get; set; }  
+        public JObject route { get; set; } 
+        public double duration { get; set; }
     }
 }
