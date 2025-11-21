@@ -24,6 +24,12 @@
   <wsdl:message name="IService1_getParcours_OutputMessage">
     <wsdl:part name="parameters" element="tns:getParcoursResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getAdresse_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAdresse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAdresse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAdresseResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetContract" message="tns:IService1_GetContract_InputMessage" />
@@ -36,6 +42,10 @@
     <wsdl:operation name="getParcours">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getParcours" message="tns:IService1_getParcours_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getParcoursResponse" message="tns:IService1_getParcours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAdresse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAdresse" message="tns:IService1_getAdresse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAdresseResponse" message="tns:IService1_getAdresse_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -60,6 +70,15 @@
     </wsdl:operation>
     <wsdl:operation name="getParcours">
       <soap:operation soapAction="http://tempuri.org/IService1/getParcours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdresse">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAdresse" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\",
+  "WorkspaceRootPath": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|c:\\users\\adrien\\documents\\polytech nice\\si4\\middleware\\letsgobiking\\serviceproxybike\\serviceproxybike\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|c:\\users\\lucdu\\desktop\\letsgobiking\\letsgobiking\\serviceproxybike\\serviceproxybike\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|solutionrelative:serviceproxybike\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\serviceproxybike\\iservice1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\serviceproxybike\\iservice1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|solutionrelative:serviceproxybike\\iservice1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\serviceproxybike\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\serviceproxybike\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|solutionrelative:serviceproxybike\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -32,24 +32,23 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\App.config",
+              "DocumentMoniker": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\App.config",
               "RelativeDocumentMoniker": "ServiceProxyBike\\App.config",
-              "ToolTip": "C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\App.config",
+              "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\App.config",
               "RelativeToolTip": "ServiceProxyBike\\App.config",
               "ViewState": "AgIAAAYAAAAAAAAAAADwvxAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-10-08T13:33:47.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T13:33:47.964Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Service1.cs",
-              "DocumentMoniker": "C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\Service1.cs",
+              "DocumentMoniker": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\Service1.cs",
               "RelativeDocumentMoniker": "ServiceProxyBike\\Service1.cs",
-              "ToolTip": "C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\Service1.cs",
+              "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\Service1.cs",
               "RelativeToolTip": "ServiceProxyBike\\Service1.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAAAGIAAACMAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAADwv4oAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T13:33:46.123Z",
               "EditorCaption": ""
@@ -58,11 +57,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "IService1.cs",
-              "DocumentMoniker": "C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\IService1.cs",
+              "DocumentMoniker": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\IService1.cs",
               "RelativeDocumentMoniker": "ServiceProxyBike\\IService1.cs",
-              "ToolTip": "C:\\Users\\adrien\\Documents\\Polytech Nice\\SI4\\MiddleWare\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\IService1.cs",
+              "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\IService1.cs",
               "RelativeToolTip": "ServiceProxyBike\\IService1.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T13:23:47.764Z",
               "EditorCaption": ""

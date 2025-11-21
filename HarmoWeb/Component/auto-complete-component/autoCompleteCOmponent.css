@@ -1,0 +1,5 @@
+#results {
+    margin-top: 2px;  /* espace avec l'input */
+    max-height: 150px;
+    overflow-y: auto;  /* scroll si trop de résultats */
+}

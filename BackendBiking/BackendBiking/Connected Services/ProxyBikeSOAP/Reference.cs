@@ -32,6 +32,12 @@ namespace BackendBiking.ProxyBikeSOAP {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getParcours", ReplyAction="http://tempuri.org/IService1/getParcoursResponse")]
         System.Threading.Tasks.Task<string> getParcoursAsync(double lat1, double lng1, double lat2, double lng2, bool isCycling);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAdresse", ReplyAction="http://tempuri.org/IService1/getAdresseResponse")]
+        string getAdresse(string adresse);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAdresse", ReplyAction="http://tempuri.org/IService1/getAdresseResponse")]
+        System.Threading.Tasks.Task<string> getAdresseAsync(string adresse);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +89,14 @@ namespace BackendBiking.ProxyBikeSOAP {
         
         public System.Threading.Tasks.Task<string> getParcoursAsync(double lat1, double lng1, double lat2, double lng2, bool isCycling) {
             return base.Channel.getParcoursAsync(lat1, lng1, lat2, lng2, isCycling);
+        }
+        
+        public string getAdresse(string adresse) {
+            return base.Channel.getAdresse(adresse);
+        }
+        
+        public System.Threading.Tasks.Task<string> getAdresseAsync(string adresse) {
+            return base.Channel.getAdresseAsync(adresse);
         }
     }
 }

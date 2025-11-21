@@ -27,6 +27,13 @@ namespace BackendBiking
 			BodyStyle = WebMessageBodyStyle.Wrapped,
 			UriTemplate = "GetRoute?start={start}&dest={dest}")]
 		Task<string> GetRoute(string start, string dest);
+
+        [WebInvoke(
+            Method = "GET",
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            UriTemplate = "GetAdresse?adresse={adresse}")]
+		Task<string> GetAdresse(string adresse);
     }
 }
 

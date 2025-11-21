@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Security.Cryptography;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -27,6 +28,12 @@ namespace BackendBiking
 		{
 			return string.Format("You entered: {0}", value);
 		}
+        public async Task<String> GetAdresse(string adresse)
+        {
+            WebOperationContext.Current.OutgoingResponse.Headers.Add("Access-Control-Allow-Origin", "http://localhost:8080");
+            String addr = await clientSoap.getAdresseAsync(adresse);
+            return addr;
+        }
 
         private async Task<Position> GetPosition(string stringPos)
         {

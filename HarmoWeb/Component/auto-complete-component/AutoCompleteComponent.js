@@ -15,6 +15,8 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
 }
 const name=this.getAttribute("name");
 this.shadowRoot.querySelector("#name").textContent=name;
+this.shadowRoot.querySelector("#results")
+
 let myTO;
 const input =this.shadowRoot.querySelector("input");
 let divResults=this.shadowRoot.querySelector("div");
@@ -24,10 +26,17 @@ input.addEventListener("keyup",function(e){
     myTO=setTimeout(async()=>
     {   const inputContent=input.value;
         if (inputContent.length>2){
-                const response = await fetch('https://api-adresse.data.gouv.fr/search/?q='+inputContent+'&limit=5');
+                console.log("Fetching for "+inputContent);
+
+                const response = await fetch('http://localhost:8733/Design_Time_Addresses/BackendBiking/Service1/GetAdresse?adresse=' + inputContent);
                 const data=await response.json();
-                const result=data.features.map(feature=>feature.properties.label)
+                const resultData = JSON.parse(data.GetAdresseResult);
+                const result = resultData.features.map(f => f.properties.label);
+                //console.log(data.GetAdresseResult);
+                divResults.innerHTML = result.map(i => `<div class="item">${i}</div>`).join("");
                 console.log(result);
+                console.log(this.shadowRoot.querySelector("#results"));
+
         }   
         },500)
         

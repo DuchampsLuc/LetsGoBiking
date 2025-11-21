@@ -24,6 +24,7 @@ namespace ServiceProxyBike
         static GenericProxyCache<string> cache = new GenericProxyCache<string>();
         static GenericProxyCache<Position> CoorCache = new GenericProxyCache<Position>();
         static GenericProxyCache<string> ParcoursCache = new GenericProxyCache<string>();
+        static GenericProxyCache<string> adresseCache = new GenericProxyCache<string>();
 
         public async Task<string> GetContract(string contract)
 		{     
@@ -135,9 +136,39 @@ namespace ServiceProxyBike
             }
 
         }
+        public async Task<string> getAdresse(string adresse)
+        {
+            try
+            {
+                if (adresseCache.Get(adresse, 86400) == null)
+                {
+                    string url = $"https://api-adresse.data.gouv.fr/search/?q={Uri.EscapeDataString(adresse)}&limit=5";
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    response.EnsureSuccessStatusCode();
+                    string json = await response.Content.ReadAsStringAsync();
+                   
+                    adresseCache.addValue(adresse, json);
+
+                    return json;
+                }
+                else
+                {
+
+                    return adresseCache.Get(adresse);
+                }
+
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", e.Message);
+                return "";
+            }
+        }
 
 
     }
+
     public class GenericProxyCache<T>
     {
         Dictionary<string,T> cache = new Dictionary<string,T>();
