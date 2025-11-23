@@ -30,7 +30,8 @@ namespace ServiceProxyBike
 		{     
             try
             {
-                if (cache.Get(contract,20.0) == null)
+
+                if (cache.Get(contract,60.0) == null )
                 {
                     String Path = "https://api.jcdecaux.com/vls/v1/stations?apiKey=a642c1e64227fd4b746cef12768dbb982a375e77";
                     Path = Path + "&contract=" + contract;
@@ -39,12 +40,13 @@ namespace ServiceProxyBike
                     string responseBody = await response.Content.ReadAsStringAsync();
                     // Above three lines can be replaced with new helper method below
                     // string responseBody = await client.GetStringAsync(uri);
+                    
                     cache.addValue(contract, responseBody);
+                    
                     return responseBody;
                 }
                 else
                 {
-
                     return cache.Get(contract);
                 }
 
@@ -53,6 +55,7 @@ namespace ServiceProxyBike
             {
                 Console.WriteLine("\nException Caught!");
                 Console.WriteLine("Message :{0} ", e.Message);
+                cache.addValue(contract, "");
                 return "";
             }
         }

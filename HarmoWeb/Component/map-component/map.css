@@ -1,0 +1,5 @@
+map-component, #map {
+    display: block;
+    height: 400px;
+    width: 100%;
+}

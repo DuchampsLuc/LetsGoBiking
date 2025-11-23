@@ -57,6 +57,7 @@ namespace BackendBiking
                     else
                     {
                         closest = new GeoCoordinate(stations[i].position.lat, stations[i].position.lng);
+                        closeststation = stations[i];
                     }
                 }
             }

@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Newtonsoft.Json;
@@ -15,7 +16,7 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace BackendBiking
 {
-    
+    [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
     public class Service1 : IService1
 	{
         private readonly ProxyBikeSOAP.Service1Client clientSoap;
@@ -35,6 +36,14 @@ namespace BackendBiking
             return addr;
         }
 
+        public async Task<String> GetCoordonnees(string adresse)
+        {
+            WebOperationContext.Current.OutgoingResponse.Headers.Add("Access-Control-Allow-Origin", "http://localhost:8080");
+            String addr = await clientSoap.GetCoordoneesAsync(adresse);
+            return addr;
+        }
+
+
         private async Task<Position> GetPosition(string stringPos)
         {
             String posResponse = await clientSoap.GetCoordoneesAsync(stringPos);
@@ -50,10 +59,22 @@ namespace BackendBiking
 
             return duration;
         }
+        static string ExtraireVille(string adresse)
+        {
+            // Cherche un code postal suivi du nom de la ville
+            var match = Regex.Match(adresse, @"\b\d{5}\s+(.+)$");
+            if (match.Success)
+            {
+                return match.Groups[1].Value.Trim();
+            }
+            return string.Empty; // Aucun résultat trouvé
+        }
+
 
 
         public async Task<string> GetRoute(string start, string dest)
 		{
+            WebOperationContext.Current.OutgoingResponse.Headers.Add("Access-Control-Allow-Origin", "http://localhost:8080");
             try
             {
                 var route = new Route();
@@ -64,11 +85,10 @@ namespace BackendBiking
                 //foot-walking mode only
                 string walkingRouteResponse = await clientSoap.getParcoursAsync(posStart.lat, posStart.lng, posDest.lat, posDest.lng, false);
                 double walkingOnlyDuration = GetDuration(walkingRouteResponse);
-
-
+                
                 //cycling-regular mode
-                string startStationsResponse = await clientSoap.GetContractAsync(start);
-                string destStationsResponse = await clientSoap.GetContractAsync(dest);
+                string startStationsResponse = await clientSoap.GetContractAsync(ExtraireVille(start));
+                string destStationsResponse = await clientSoap.GetContractAsync(ExtraireVille(dest));
                 
                 List<Station> startStations = JsonConvert.DeserializeObject<List<Station>>(startStationsResponse);
                 List<Station> destStations = JsonConvert.DeserializeObject<List<Station>>(destStationsResponse);
@@ -118,8 +138,9 @@ namespace BackendBiking
                 });
                 return errorJson;
             }
-		}
-	}
+		    }
+
+            }
 
     public class Position
     {
@@ -134,4 +155,5 @@ namespace BackendBiking
         }
 
     }
-}
+    
+   }
