@@ -70,7 +70,7 @@ namespace BackendBiking
             return string.Empty; // Aucun résultat trouvé
         }
 
-
+  
 
         public async Task<string> GetRoute(string start, string dest)
 		{
@@ -94,8 +94,8 @@ namespace BackendBiking
                 List<Station> destStations = JsonConvert.DeserializeObject<List<Station>>(destStationsResponse);
                 if (startStations != null && destStations != null && startStations.Count != 0 && destStations.Count != 0)
                 {
-                    Station startClosestStation = Station.getClosestStation(posStart, startStations);
-                    Station destClosestStation = Station.getClosestStation(posDest, destStations);
+                    Station startClosestStation = Station.getClosestStation(posStart, startStations, true);
+                    Station destClosestStation = Station.getClosestStation(posDest, destStations, false);
 
                     Position posStartStat = startClosestStation.position;
                     Position posDestStat = destClosestStation.position;
