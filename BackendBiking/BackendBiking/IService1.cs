@@ -14,13 +14,6 @@ namespace BackendBiking
     [ServiceContract]
     public interface IService1
     {
-        [OperationContract]
-        [WebInvoke(
-            Method = "GET",
-            ResponseFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.Wrapped,
-            UriTemplate = "GetData?value={value}")]
-        string GetData(int value);
 		[WebInvoke(
 			Method = "GET",
 			ResponseFormat = WebMessageFormat.Json,
@@ -41,6 +34,13 @@ namespace BackendBiking
             BodyStyle = WebMessageBodyStyle.Wrapped,
             UriTemplate = "GetCoordonnees?adresse={adresse}")]
 		Task<string> GetCoordonnees(string adresse);
+
+        [WebInvoke(
+            Method = "GET",
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Wrapped,
+            UriTemplate = "GetNotification?adresse={adresse}")]
+        Task<string> GetNotification(string adresse);
     }
 }
 

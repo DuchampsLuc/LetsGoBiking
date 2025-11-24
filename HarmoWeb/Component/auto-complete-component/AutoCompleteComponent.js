@@ -1,6 +1,6 @@
 window.departadress = null;
 window.arriveeadress = null;
-
+window.currentMarkers = [];
 
 class AutoCompleteComponent extends HTMLElement {
 constructor() {
@@ -49,13 +49,55 @@ input.addEventListener("keyup",(e)=>{
                             // Supposons que ton serveur renvoie {lat: ..., lng: ...}
                     console.log("Coordonnées reçues :", coordData);
                     if (window.Map) {
-                        L.marker([lat, lng]).addTo(window.Map)
+                        // Efface les anciens markers
+                        if (window.currentMarkers.length>=2){
+                        
+                        clearMap();
+                        const name = self.getAttribute("name"); // "Depart" ou "Arrivée"
+                        if (name === "Depart") {
+                            L.marker(currentMarkers[1]).addTo(window.Map)
+                                .bindPopup(window.arriveeadress)
+                                .openPopup();
+                            L.marker([lat, lng]).addTo(window.Map)
+                                .bindPopup(adresseChoisie)
+                                .openPopup();
+                            window.currentMarkers[0]=[lat, lng]
+                        } else if (name === "Arrivée") {
+                            L.marker(currentMarkers[0]).addTo(window.Map)
+                                .bindPopup(window.arriveeadress)
+                                .openPopup();
+                            L.marker([lat, lng]).addTo(window.Map)
+                                .bindPopup(adresseChoisie)
+                                .openPopup();
+                            window.currentMarkers[1]=[lat, lng]
+                        }
+                            // Ajoute le nouveau marker
+                    } else {
+                        const marker = L.marker([lat, lng]).addTo(window.Map)
                             .bindPopup(adresseChoisie)
                             .openPopup();
-
-                        // Centrer la carte sur le marker
-                        window.Map.setView([lat, lng], 15);
+                            window.currentMarkers.push([lat, lng]);
                     }
+                            // Centre la carte
+                            window.Map.setView([lat, lng], 15);
+
+                    }
+                    const client = new StompJs.Client({
+                        brokerURL: 'ws://localhost:61614/',    // <-- PAS /stomp
+                        reconnectDelay: 5000
+                    });
+
+                    client.onConnect = () => {
+                        console.log("Connected to ActiveMQ via STOMP over WebSocket");
+
+                        client.subscribe("/queue/MA_QUEUE", message => {
+                            console.log("Message reçu :", message.body);
+                        });
+                    };
+
+                    client.activate();
+
+
 
                     // Remplir l'input et vider les résultats
                     input.value = adresseChoisie;
@@ -131,5 +173,14 @@ function removeAccents(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+function clearMap(){
+    window.Map.eachLayer((layer) => {
+        if (!(layer instanceof L.TileLayer)){
+           window.Map.removeLayer(layer);
+        }
+    });
+}
+
+                                
 
 customElements.define("auto-complete", AutoCompleteComponent);

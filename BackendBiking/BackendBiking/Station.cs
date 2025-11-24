@@ -35,7 +35,7 @@ namespace BackendBiking
                    $"Dernière mise à jour : {last_update}";
         }
 
-        public static Station getClosestStation(Position pos, List<Station> stations)
+        public static Station getClosestStation(Position pos, List<Station> stations, bool needBike)
         {
             Station closeststation = null;
             GeoCoordinate mygeo = new GeoCoordinate(pos.lat, pos.lng);
@@ -47,8 +47,10 @@ namespace BackendBiking
                 {
                     if (closest != null)
                     {
+                        //Prends en compte si la station a des vélos libres si l'utilisateur souhaite en prendre, ou s'il y a des places lires pour deposer un vélo
+                        bool isAvailable = needBike ? stations[i].available_bikes > 0 : stations[i].available_bike_stands > 0;
 
-                        if (mygeo.GetDistanceTo(temp) < mygeo.GetDistanceTo(closest))
+                        if (mygeo.GetDistanceTo(temp) < mygeo.GetDistanceTo(closest) && isAvailable)
                         {
                             closest = new GeoCoordinate(stations[i].position.lat, stations[i].position.lng);
                             closeststation = stations[i];

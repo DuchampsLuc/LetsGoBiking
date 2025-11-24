@@ -38,8 +38,7 @@
               "RelativeToolTip": "ServiceProxyBike\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-10-08T13:33:47.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T13:33:47.964Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "ServiceProxyBike\\Service1.cs",
               "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\Service1.cs",
               "RelativeToolTip": "ServiceProxyBike\\Service1.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAgwDoAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAKgAAAAAAAAAAADwvy0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T13:33:46.123Z",
               "EditorCaption": ""
@@ -64,8 +63,7 @@
               "RelativeToolTip": "ServiceProxyBike\\IService1.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T13:23:47.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T13:23:47.764Z"
             }
           ]
         }
