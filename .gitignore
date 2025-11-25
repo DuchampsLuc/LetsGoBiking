@@ -84,3 +84,8 @@ TestResults/
 *.mdb
 *.pid
 *.plist
+
+ServiceProxyBike/bin/
+ServiceProxyBike/obj/
+*.dll
+*.pdb
