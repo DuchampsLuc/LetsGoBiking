@@ -1,9 +1,6 @@
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\obj\Debug\BackendBiking.csproj.AssemblyReference.cache
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\obj\Debug\BackendBiking.csproj.CoreCompileInputs.cache
-C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\BackendBiking.dll.config
-C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\BackendBiking.dll
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\BackendBiking.pdb
-C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\obj\Debug\BackendBiking.dll
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\obj\Debug\BackendBiking.pdb
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\obj\Debug\XsdGeneratedCode\GeneratedXsdTypes.cs
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\Newtonsoft.Json.dll
@@ -14,3 +11,6 @@ C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\ICSharpCode.SharpZipLib.dll
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\ICSharpCode.SharpZipLib.pdb
 C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\BackendBiking.exe.config
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\bin\Debug\BackendBiking.exe
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\BackendBiking\BackendBiking\obj\Debug\BackendBiking.exe

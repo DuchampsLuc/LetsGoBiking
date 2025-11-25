@@ -33,7 +33,7 @@ input.addEventListener("keyup",(e)=>{
         if (inputContent.length>2){
                 console.log("Fetching for "+inputContent);
 
-                const response = await fetch('http://localhost:8733/Design_Time_Addresses/BackendBiking/Service1/rest/GetAdresse?adresse=' + inputContent);
+                const response = await fetch('http://localhost:8200/Service1/rest/GetAdresse?adresse=' + inputContent);
                 const data=await response.json();
                 const resultData = JSON.parse(data.GetAdresseResult);
                 const result = resultData.features.map(f => f.properties.label);
@@ -51,7 +51,7 @@ input.addEventListener("keyup",(e)=>{
                 item.addEventListener('click', async () => {
                     const adresseChoisie = item.textContent;
                     console.log("Adresse choisie :", adresseChoisie);
-                    const coordResponse = await fetch('http://localhost:8733/Design_Time_Addresses/BackendBiking/Service1/rest/GetCoordonnees?adresse=' + encodeURIComponent(adresseChoisie));
+                    const coordResponse = await fetch('http://localhost:8200/Service1/rest/GetCoordonnees?adresse=' + encodeURIComponent(adresseChoisie));
                     const coordData = await coordResponse.json();
                     const { lat, lng } = JSON.parse(coordData.GetCoordonneesResult);;
                             // Supposons que ton serveur renvoie {lat: ..., lng: ...}
@@ -108,7 +108,7 @@ input.addEventListener("keyup",(e)=>{
 
                     if (window.departadress && window.arriveeadress) {
                             console.log("Appel du serveur avec : ", window.departadress, window.arriveeadress);
-                            const adresse=`http://localhost:8733/Design_Time_Addresses/BackendBiking/Service1/rest/GetRoute?start=${window.departadress}&dest=${window.arriveeadress}`;
+                            const adresse=`http://localhost:8200/Service1/rest/GetRoute?start=${window.departadress}&dest=${window.arriveeadress}`;
                             console.log("URL de l'itinéraire :", adresse);
                             //Exemple fetch vers ton serveur avec les deux points
                             const response = await fetch(adresse);
