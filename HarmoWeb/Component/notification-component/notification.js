@@ -73,7 +73,7 @@ class MeteoButton extends HTMLElement {
             return;
         }
         const adresseEncoded = encodeURIComponent(rawAdresse);
-        const url = `http://localhost:8733/Design_Time_Addresses/BackendBiking/Service1/GetNotification?adresse=${adresseEncoded}`;
+        const url = `http://localhost:8733/Design_Time_Addresses/BackendBiking/Service1/rest/GetNotification?adresse=${adresseEncoded}`;
         console.log("[GetNotification] URL appelée:", url, "adresse source:", rawAdresse);
         fetch(url)
             .then(async r => {
