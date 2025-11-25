@@ -8,40 +8,50 @@ namespace ServiceProxyBike
     {
         static void Main(string[] args)
         {
-            // Adresse du service
-            Uri baseAddress = new Uri("http://localhost:8000/Service1/");
-
-            // Créer et configurer le self-host
-            using (ServiceHost host = new ServiceHost(typeof(Service1), baseAddress))
+            Uri baseAddress = new Uri("http://localhost:8123/Service1/");
+        using (ServiceHost host = new ServiceHost(typeof(Service1), baseAddress))
             {
-                // Ajouter un endpoint basicHttpBinding
-                host.AddServiceEndpoint(
-                    typeof(IService1),
-                    new BasicHttpBinding(),
-                    ""
-                );
-
-                // Ajouter un endpoint MEX
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior
+                try
                 {
-                    HttpGetEnabled = true
-                };
-                host.Description.Behaviors.Add(smb);
-                host.AddServiceEndpoint(
-                    typeof(IMetadataExchange),
-                    MetadataExchangeBindings.CreateMexHttpBinding(),
-                    "mex"
-                );
+                    // Créer un BasicHttpBinding avec des quotas augmentés pour les gros messages  
+                    BasicHttpBinding binding = new BasicHttpBinding();
+                    binding.MaxReceivedMessageSize = 1024 * 1024 * 10; // 10 Mo  
+                    binding.ReaderQuotas.MaxStringContentLength = 1024 * 1024 * 10; // 10 Mo  
 
-                // Ouvrir le service
-                host.Open();
-                Console.WriteLine("Serveur SOAP démarré !");
-                Console.WriteLine("Adresse : http://localhost:8080/Service1/");
-                Console.WriteLine("Appuyez sur ENTER pour arrêter.");
-                Console.ReadLine();
+                    // Ajouter le endpoint du service  
+                    host.AddServiceEndpoint(typeof(IService1), binding, "");
 
-                host.Close();
+                    // Ajouter le endpoint de metadata (MEX)  
+                    ServiceMetadataBehavior smb = new ServiceMetadataBehavior
+                    {
+                        HttpGetEnabled = true
+                    };
+                    host.Description.Behaviors.Add(smb);
+
+                    host.AddServiceEndpoint(
+                        typeof(IMetadataExchange),
+                        MetadataExchangeBindings.CreateMexHttpBinding(),
+                        "mex"
+                    );
+
+                    Console.WriteLine("→ Ouverture du service…");
+                    host.Open();
+                    Console.WriteLine("Serveur SOAP démarré !");
+                    Console.WriteLine("Adresse : http://localhost:8123/Service1/");
+                    Console.WriteLine("WSDL   : http://localhost:8123/Service1/mex");
+                    Console.WriteLine("Appuyez sur ENTER pour arrêter.");
+                    Console.ReadLine();
+
+                    host.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("❌ Erreur au démarrage du serveur :");
+                    Console.WriteLine(ex.ToString());
+                }
             }
         }
-    }
+    }  
+
+
 }

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\BackendBiking\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|solutionrelative:BackendBiking\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|c:\\users\\lucdu\\desktop\\letsgobiking\\letsgobiking\\backendbiking\\backendbiking\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|solutionrelative:backendbiking\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|c:\\users\\lucdu\\desktop\\letsgobiking\\letsgobiking\\backendbiking\\backendbiking\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|solutionrelative:backendbiking\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\backendbiking\\iservice1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|solutionrelative:backendbiking\\iservice1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\backendbiking\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|solutionrelative:backendbiking\\service1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4824C24-7B94-498C-B52F-B9DBE184F239}|BackendBiking\\BackendBiking.csproj|C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\backendbiking\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,16 +62,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Service1.cs",
               "DocumentMoniker": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\BackendBiking\\Service1.cs",
               "RelativeDocumentMoniker": "BackendBiking\\Service1.cs",
               "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\BackendBiking\\Service1.cs",
               "RelativeToolTip": "BackendBiking\\Service1.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAhwB4AAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAtwFEAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T14:27:49.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T14:27:49.83Z"
             },
             {
               "$type": "Document",
@@ -79,25 +78,24 @@
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\BackendBiking\\App.config",
               "RelativeDocumentMoniker": "BackendBiking\\App.config",
-              "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\BackendBiking\\App.config",
-              "RelativeToolTip": "BackendBiking\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\BackendBiking\\App.config*",
+              "RelativeToolTip": "BackendBiking\\App.config*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-11-20T14:32:39.869Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IService1.cs",
               "DocumentMoniker": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\BackendBiking\\IService1.cs",
               "RelativeDocumentMoniker": "BackendBiking\\IService1.cs",
               "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\BackendBiking\\BackendBiking\\IService1.cs",
               "RelativeToolTip": "BackendBiking\\IService1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T14:27:33.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T14:27:33.414Z"
             }
           ]
         }
