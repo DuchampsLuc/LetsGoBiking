@@ -25,6 +25,7 @@ namespace ServiceProxyBike
         static GenericProxyCache<Position> CoorCache = new GenericProxyCache<Position>();
         static GenericProxyCache<string> ParcoursCache = new GenericProxyCache<string>();
         static GenericProxyCache<string> adresseCache = new GenericProxyCache<string>();
+        static GenericProxyCache<string> meteoCache = new GenericProxyCache<string>();
 
         public async Task<string> GetContract(string contract)
 		{     
@@ -166,6 +167,43 @@ namespace ServiceProxyBike
                 Console.WriteLine("\nException Caught!");
                 Console.WriteLine("Message :{0} ", e.Message);
                 return "";
+            }
+        }
+
+        public async Task<string> getMeteo(double lat,double lng)
+        {
+            Position pos1 = new Position(lat, lng);
+            string PourCache = JsonConvert.SerializeObject(pos1);
+            try
+            {
+                if (meteoCache.Get(PourCache, 3600) == null)
+                {
+                    string url = $"https://api.open-meteo.com/v1/forecast" +
+                     $"?latitude={lat}&longitude={lng}" +
+                     $"&current_weather=true" +
+                     $"&temperature_unit=celsius" +
+                     $"&windspeed_unit=kmh";
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    response.EnsureSuccessStatusCode();
+                    string json = await response.Content.ReadAsStringAsync();
+
+                    meteoCache.addValue(PourCache, json);
+
+                    return json;
+                }
+                else
+                {
+
+                    return meteoCache.Get(PourCache);
+                }
+
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", e.Message);
+                meteoCache.addValue(PourCache, "");
+                return "test";
             }
         }
 

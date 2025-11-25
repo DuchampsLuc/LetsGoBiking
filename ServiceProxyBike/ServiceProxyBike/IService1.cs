@@ -26,9 +26,13 @@ namespace ServiceProxyBike
 		[OperationContract]
 		Task<String> getAdresse(string adresse);
 
+        [OperationContract]
+        Task<String> getMeteo(double lat,double lng);
 
-		// TODO: ajoutez vos opérations de service ici
-	}
+
+
+        // TODO: ajoutez vos opérations de service ici
+    }
 
 	// Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.
 	// Vous pouvez ajouter des fichiers XSD au projet. Une fois le projet généré, vous pouvez utiliser directement les types de données qui y sont définis, avec l'espace de noms "ServiceProxyBike.ContractType".

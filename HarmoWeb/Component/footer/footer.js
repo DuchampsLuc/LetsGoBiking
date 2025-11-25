@@ -11,8 +11,10 @@ const template = new DOMParser().parseFromString(html, "text/html").querySelecto
 if (template) {
 this.shadowRoot.appendChild(template.content.cloneNode(true));
 }
-
+console.log("Footer loaded");
 }
 }
 
-customElements.define("my-footer", MonComposant);
+if (!customElements.get("my-footer")) {
+    customElements.define("my-footer", MonComposant);
+}

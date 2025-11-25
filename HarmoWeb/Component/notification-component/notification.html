@@ -1,0 +1,72 @@
+<template>
+  <style>
+    button {
+      padding: 10px 15px;
+      background: #0078ff;
+      color: rgb(0, 0, 0);
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    #result {
+      margin-top: 10px;
+    }
+    #itineraire {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f5f5f5;
+      border-radius: 8px;
+    }
+    .step-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .nav-btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .nav-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .step-content {
+      padding: 15px;
+      background: white;
+      border-radius: 5px;
+      margin: 10px 0;
+      border-left: 4px solid #667eea;
+    }
+    .step-mode {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .mode-walking { background: #4ade80; color: white; }
+    .mode-cycling { background: #3b82f6; color: white; }
+    .step-instruction {
+      font-size: 14px;
+      font-weight: 500;
+      margin: 5px 0;
+    }
+    .step-info {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+
+  <button id="meteoBtn">Obtenir la météo</button>
+  <div id="result"></div>
+  <div id="itineraire"></div>
+</template>

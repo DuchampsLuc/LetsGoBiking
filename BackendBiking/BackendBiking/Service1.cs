@@ -33,6 +33,8 @@ namespace BackendBiking
 
         public async Task<String> GetNotification(string adresse)
         {
+            WebOperationContext.Current.OutgoingResponse.Headers.Add("Access-Control-Allow-Origin", "http://localhost:8080");
+
             Uri connecturi = new Uri("activemq:tcp://localhost:61616");
             ConnectionFactory connectionFactory = new ConnectionFactory(connecturi);
 
@@ -41,41 +43,45 @@ namespace BackendBiking
             connection.Start();
 
             // Create a session from the Connection.
-            ISession session = connection.CreateSession();
+            Apache.NMS.ISession session = connection.CreateSession();
 
             // Use the session to target a queue.
-            IDestination destination = session.GetQueue("MA_QUEUE");
+            IDestination destinationmeteo = session.GetQueue("meteo");
+            IDestination destinationpolution = session.GetQueue("polution");
+
 
             // Create a Producer targetting the selected queue.
-            IMessageProducer producer = session.CreateProducer(destination);
+            IMessageProducer producermeteo = session.CreateProducer(destinationmeteo);
+            IMessageProducer producerpolution = session.CreateProducer(destinationpolution);
+
 
             // You may configure everything to your needs, for instance:
-            producer.DeliveryMode = MsgDeliveryMode.Persistent;
+            producermeteo.DeliveryMode = MsgDeliveryMode.Persistent;
+            producerpolution.DeliveryMode = MsgDeliveryMode.Persistent;
 
             // Finally, to send messages:
-            ITextMessage message = session.CreateTextMessage("Hello World 2");
-            producer.Send(message);
+            string meteo = await messagemeteo(adresse);
+            ITextMessage message = session.CreateTextMessage(meteo);
+            producermeteo.Send(message);
+            //producerpolution.Send(message);
 
             Console.WriteLine("Message sent, check ActiveMQ web interface to confirm.");
-            Console.ReadLine();
 
             // Don't forget to close your session and connection when finished.
             session.Close();
             connection.Close();
-
-
-
-            return "";
+            return meteo;
         }
 
+        public async Task<String>  messagemeteo(string adresse)
+        {
+            Position pos = await GetPosition(adresse);
 
-
-
-
-
-
-
-
+            pos.lat = (int)pos.lat;
+            pos.lng = (int)pos.lng;
+            string meteo = await clientSoap.getMeteoAsync(pos.lat, pos.lng);
+            return meteo;
+        }
 
         public async Task<String> GetAdresse(string adresse)
         {

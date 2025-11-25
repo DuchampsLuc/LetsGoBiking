@@ -38,6 +38,12 @@ namespace BackendBiking.ProxyBikeSOAP {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAdresse", ReplyAction="http://tempuri.org/IService1/getAdresseResponse")]
         System.Threading.Tasks.Task<string> getAdresseAsync(string adresse);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getMeteo", ReplyAction="http://tempuri.org/IService1/getMeteoResponse")]
+        string getMeteo(double lat, double lng);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getMeteo", ReplyAction="http://tempuri.org/IService1/getMeteoResponse")]
+        System.Threading.Tasks.Task<string> getMeteoAsync(double lat, double lng);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +103,14 @@ namespace BackendBiking.ProxyBikeSOAP {
         
         public System.Threading.Tasks.Task<string> getAdresseAsync(string adresse) {
             return base.Channel.getAdresseAsync(adresse);
+        }
+        
+        public string getMeteo(double lat, double lng) {
+            return base.Channel.getMeteo(lat, lng);
+        }
+        
+        public System.Threading.Tasks.Task<string> getMeteoAsync(double lat, double lng) {
+            return base.Channel.getMeteoAsync(lat, lng);
         }
     }
 }

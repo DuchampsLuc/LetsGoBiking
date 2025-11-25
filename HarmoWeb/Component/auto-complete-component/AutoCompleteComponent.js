@@ -82,20 +82,7 @@ input.addEventListener("keyup",(e)=>{
                             window.Map.setView([lat, lng], 15);
 
                     }
-                    const client = new StompJs.Client({
-                        brokerURL: 'ws://localhost:61614/',    // <-- PAS /stomp
-                        reconnectDelay: 5000
-                    });
-
-                    client.onConnect = () => {
-                        console.log("Connected to ActiveMQ via STOMP over WebSocket");
-
-                        client.subscribe("/queue/MA_QUEUE", message => {
-                            console.log("Message reçu :", message.body);
-                        });
-                    };
-
-                    client.activate();
+            
 
 
 
@@ -120,6 +107,10 @@ input.addEventListener("keyup",(e)=>{
                             const itineraire = await response.json();
                             console.log("Itinéraire reçu : ", itineraire);
                             const routeData = JSON.parse(itineraire.GetRouteResult);
+                            
+                            // Envoyer événement pour affichage des étapes
+                            window.dispatchEvent(new CustomEvent('routeUpdated', { detail: { route: routeData } }));
+                            
                             const coords = routeData.segments[0].route.features[0].geometry.coordinates;
                             const latlngs = coords.map(c => [c[1], c[0]]);
                             console.log("LatLngs de la route :", latlngs);
