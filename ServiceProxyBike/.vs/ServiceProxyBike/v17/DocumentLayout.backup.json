@@ -16,9 +16,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\serviceproxybike\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|solutionrelative:serviceproxybike\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{879B4490-E78D-4789-B29C-107BF2F431BE}|ServiceProxyBike\\ServiceProxyBike.csproj|c:\\users\\lucdu\\desktop\\letsgobiking\\letsgobiking\\serviceproxybike\\serviceproxybike\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,8 +40,7 @@
               "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\ServiceProxyBike.csproj",
               "RelativeToolTip": "ServiceProxyBike\\ServiceProxyBike.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-25T17:12:50.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T17:12:50.962Z"
             },
             {
               "$type": "Document",
@@ -56,8 +52,7 @@
               "RelativeToolTip": "ServiceProxyBike\\App.config",
               "ViewState": "AgIAABwAAAAAAAAAAAAAADAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-11-25T14:25:25.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T14:25:25.811Z"
             },
             {
               "$type": "Document",
@@ -67,7 +62,7 @@
               "RelativeDocumentMoniker": "ServiceProxyBike\\Service1.cs",
               "ToolTip": "C:\\Users\\lucdu\\Desktop\\letsGoBiking\\LetsGoBiking\\ServiceProxyBike\\ServiceProxyBike\\Service1.cs",
               "RelativeToolTip": "ServiceProxyBike\\Service1.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwCYAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAwwC0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T14:25:25.919Z",
               "EditorCaption": ""
@@ -82,8 +77,7 @@
               "RelativeToolTip": "ServiceProxyBike\\IService1.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAswDUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T14:25:25.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T14:25:25.923Z"
             }
           ]
         }

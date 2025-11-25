@@ -1,0 +1,9 @@
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.csproj.AssemblyReference.cache
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.csproj.CoreCompileInputs.cache
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.pdb
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.pdb
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceP.948205A1.Up2Date
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.exe.config
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\bin\Debug\ServiceProxyBike.exe
+C:\Users\lucdu\Desktop\letsGoBiking\LetsGoBiking\ServiceProxyBike\ServiceProxyBike\obj\Debug\ServiceProxyBike.exe
