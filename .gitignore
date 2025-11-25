@@ -85,5 +85,4 @@ TestResults/
 *.pid
 *.plist
 
-*.dll
 *.pdb
