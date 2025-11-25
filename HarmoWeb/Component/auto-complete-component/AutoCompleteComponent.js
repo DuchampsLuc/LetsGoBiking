@@ -38,8 +38,16 @@ input.addEventListener("keyup",(e)=>{
                 const resultData = JSON.parse(data.GetAdresseResult);
                 const result = resultData.features.map(f => f.properties.label);
                 //console.log(data.GetAdresseResult);
-                divResults.innerHTML = result.map(i => `<div class="item">${i}</div>`).join("");
+                divResults.innerHTML = result.map(i => `<div class="item" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #e0e0e0; transition: background-color 0.2s ease; background-color: white;">${i}</div>`).join("");
                 divResults.querySelectorAll('.item').forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.style.backgroundColor = '#667eea';
+                    item.style.color = 'white';
+                });
+                item.addEventListener('mouseleave', () => {
+                    item.style.backgroundColor = 'white';
+                    item.style.color = 'black';
+                });
                 item.addEventListener('click', async () => {
                     const adresseChoisie = item.textContent;
                     console.log("Adresse choisie :", adresseChoisie);
